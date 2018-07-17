@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<!-- Bring Bootstrap 3 libraries -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<title>Welcome to Project1</title>
+<script src="./resources/js/main.js"></script>
+<script src="./resources/js/bank.js"></script>
+</head>
+<body>
+
+	<br>
+	<div class="container-fluid">
+		<div class="rsection" id="magicSection">
+			<h1>Welcome to JavaScript</h1>
+			<h3>printing to the page</h3>
+			<p id="para1" onclick="change()">no one will see this text</p>
+			<script>
+				//JavaScript comment
+				document.getElementById("para1").innerHTML = "<b>altered text</b>";
+
+				function change() {
+					document.getElementById("para1").innerHTML += "<br>changed";
+				}
+			</script>
+			<button onclick="writeToPage()">click</button>
+			<button onclick="window.alert('never use for debug')">alert</button>
+			<button onclick="console.log('stuff stuff stuff')">log</button>
+		</div>
+
+		<br>
+		<div class="rsection">
+			<h3>Dynamic Tables</h3>
+			<ul style="list-style-type: none">
+				<li>NPC NAME</li>
+				<li><input type="text" id="npc_name"></li>
+				<li>NPC CLASS</li>
+				<li><input type="text" id="npc_class"></li>
+				<li><button onclick="addNPC()">add</button>
+			</ul>
+
+			<table border="2px" id="the_table">
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>TYPE</th>
+
+				</tr>
+
+			</table>
+
+		</div>
+
+		<br>
+
+		<div class="rsection">
+			<h1>Bubbling and Capturing</h1>
+			<div style="padding: 50px; background-color: #333333" id="1">
+				<div style="padding: 50px; background-color: #666666" id="2">
+					<div style="padding: 50px; background-color: #999999" id="3">
+						<h3>hiya</h3>
+					</div>
+				</div>
+			</div>
+			</li>
+		</div>
+
+		<div class="rsection">
+			<table id="userTable">
+				<tr >
+					<th>ID</th>
+					<th>Name</th>
+					<th>Type</th>
+				</tr>
+			</table>
+
+		</div>
+</body>
+</html>
