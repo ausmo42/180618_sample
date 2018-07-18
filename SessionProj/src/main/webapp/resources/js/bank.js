@@ -5,6 +5,8 @@ window.onload = function() {
 function getUsers(){
 	let xhr = new XMLHttpRequest();
 	let url = "SelectUserServlet";
+	
+	
 
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4 && xhr.status == 200) {
@@ -12,6 +14,8 @@ function getUsers(){
 			let table = document.getElementById("userTable");
 			table.innerHTML = "<tr><th>ID</th><th>Name</th><th>Type</th></tr>"
 
+			console.log(data);
+				
 			for (index in data) {
 				let row = document.createElement("tr");
 				
