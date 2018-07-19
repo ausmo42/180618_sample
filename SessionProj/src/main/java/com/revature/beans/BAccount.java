@@ -6,6 +6,8 @@ public class BAccount {
 	private Double balance;
 	private Integer validated;
 	private Integer user;
+	
+	
 
 	public Integer getId() {
 		return id;
